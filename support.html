@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Falcon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="mark">F</div>
+    <h1>Falcon</h1>
+  </header>
+
+  <div class="lang"><strong>English</strong> · <a href="support-zh.html">中文</a></div>
+
+  <h1>Support</h1>
+  <p class="updated">Need help with Falcon? Start here.</p>
+
+  <p>Falcon is an iperf-based network throughput tester for iOS. If you run into a problem or have a question, email us — we read every message.</p>
+
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:boxing.falcon.support@gmail.com">boxing.falcon.support@gmail.com</a></p>
+  <p>To help us reproduce an issue, please include your iOS version, device model, the engine you used (iperf3 / iperf2), and whether the test was local or over SSH.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h2>Why does my test fail to connect?</h2>
+  <p>A throughput test needs an <strong>iperf server running on the other end</strong>. Make sure the target device is reachable on your network and that an iperf server is listening on the port you specified (default 5201 for iperf3, 5001 for iperf2). With Falcon Pro, the SSH orchestration feature starts and stops that server for you automatically.</p>
+
+  <h2>What is the difference between the free and Pro versions?</h2>
+  <p>The free version lets you run full manual throughput tests (TCP / UDP, both directions, parallel streams, custom bitrate) and view, export, and share your complete history. <strong>Falcon Pro</strong> (a one-time purchase) adds SSH remote orchestration, command mode, custom presets and built-in scenarios, saved/favorite targets, and historical run comparison and batch export.</p>
+
+  <h2>What does SSH orchestration do?</h2>
+  <p>Instead of manually typing <code>iperf -s</code> on the other device, Falcon connects to a peer (OpenWrt / Linux / another machine) over SSH, starts the iperf server for you, runs the client on your phone, and cleans up the remote process when the test finishes. It supports password and private-key authentication and verifies the host key (TOFU).</p>
+
+  <h2>My UDP test shows no jitter or packet loss. Why?</h2>
+  <p>Jitter and loss come from the server-side report. For some UDP test directions, especially with iperf2, those numbers may not be returned — in that case Falcon shows a dash and a note that the peer report was not received. The throughput figure shown is the sender-side rate.</p>
+
+  <h2>Does Falcon collect my data?</h2>
+  <p>No. All test results stay on your device, SSH credentials are stored only in the iOS Keychain, and nothing is sent to the developer. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+  <h2>How do I restore my purchase on a new device?</h2>
+  <p>Open the Settings tab in Falcon, find the Falcon Pro section, and tap <strong>Restore Purchases</strong>. As long as you are signed in with the same Apple ID, your Pro unlock will be restored.</p>
+
+  <footer>© 2026 Bo Xing · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></footer>
+</div>
+</body>
+</html>

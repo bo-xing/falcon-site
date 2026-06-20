@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技术支持 · Falcon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="mark">F</div>
+    <h1>Falcon</h1>
+  </header>
+
+  <div class="lang"><a href="support.html">English</a> · <strong>中文</strong></div>
+
+  <h1>技术支持</h1>
+  <p class="updated">使用 Falcon 遇到问题？从这里开始。</p>
+
+  <p>Falcon 是一款基于 iperf 的 iOS 网络吞吐测试工具。如果你遇到问题或有疑问，欢迎发邮件给我们——每一封都会认真查看。</p>
+
+  <h2>联系方式</h2>
+  <p>邮箱：<a href="mailto:boxing.falcon.support@gmail.com">boxing.falcon.support@gmail.com</a></p>
+  <p>为便于我们复现问题，来信请尽量附上：iOS 版本、设备型号、使用的引擎（iperf3 / iperf2），以及这次测试是本地直连还是走 SSH。</p>
+
+  <h2>常见问题</h2>
+
+  <h2>为什么测试连不上？</h2>
+  <p>吞吐测试需要<strong>对端有一个正在运行的 iperf server</strong>。请确认目标设备在你的网络中可达，并且 iperf server 正监听你指定的端口（iperf3 默认 5201，iperf2 默认 5001）。使用 Falcon Pro 时，SSH 编排功能会自动帮你起停对端的 server。</p>
+
+  <h2>免费版和 Pro 版有什么区别？</h2>
+  <p>免费版可以完整手动跑吞吐测试（TCP / UDP、上传 / 下载方向、并行流、自定义码率），并查看、导出、分享你的全部历史记录。<strong>Falcon Pro</strong>（一次性买断）额外提供：SSH 远程编排、命令模式、自定义预设与内置场景、保存 / 收藏常用目标，以及历史运行对比和批量导出。</p>
+
+  <h2>SSH 编排是做什么的？</h2>
+  <p>不用再手动到对端敲 <code>iperf -s</code>。Falcon 会通过 SSH 连到对端设备（OpenWrt / Linux / 另一台机器），自动起好 iperf server，在手机上跑 client，测完再自动回收对端进程。支持密码与私钥认证，并对主机密钥做校验（TOFU）。</p>
+
+  <h2>我的 UDP 测试没有抖动 / 丢包数据？</h2>
+  <p>抖动和丢包来自对端 server 的回传报告。在某些 UDP 测试方向下（尤其是 iperf2 正向 UDP），这些数值可能拿不到——此时 Falcon 会显示「—」并提示「未收到对端确认」。界面上显示的速度是发送端口径的码率。</p>
+
+  <h2>Falcon 会收集我的数据吗？</h2>
+  <p>不会。所有测试结果都只保存在你的设备上，SSH 凭据仅存于 iOS 钥匙串（Keychain），不会回传给开发者。详见<a href="privacy-zh.html">隐私政策</a>。</p>
+
+  <h2>换了新设备如何恢复购买？</h2>
+  <p>打开 Falcon 的「设置」页，找到 Falcon Pro 区域，点击<strong>「恢复购买」</strong>。只要使用同一个 Apple ID 登录，你的 Pro 解锁状态就会恢复。</p>
+
+  <footer>© 2026 Bo Xing · <a href="index.html">返回首页</a> · <a href="privacy-zh.html">隐私政策</a> · <a href="terms-zh.html">用户协议</a></footer>
+</div>
+</body>
+</html>
