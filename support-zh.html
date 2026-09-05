@@ -1,50 +1,116 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>技术支持 · Falcon</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="iPerf Falcon 在 iPhone、iPad 与 Mac 上的技术支持与常见问题。">
+  <meta name="theme-color" content="#f8faff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080b12" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://bo-xing.github.io/falcon-site/support-zh.html">
+  <link rel="alternate" hreflang="en" href="https://bo-xing.github.io/falcon-site/support.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://bo-xing.github.io/falcon-site/support-zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://bo-xing.github.io/falcon-site/support.html">
+  <link rel="icon" href="app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="app-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>技术支持 · iPerf Falcon</title>
 </head>
 <body>
-<div class="wrap">
-  <header class="site">
-    <div class="mark">F</div>
-    <h1>Falcon</h1>
-  </header>
+  <a class="skip-link" href="#main-content">跳至正文</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="iPerf Falcon 首页">
+        <img src="app-icon.png" width="42" height="42" alt="">
+        <span>iPerf Falcon</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="support-zh.html" aria-current="page">支持</a>
+        <a href="privacy-zh.html">隐私</a>
+        <a href="terms-zh.html">条款</a>
+      </nav>
+    </header>
 
-  <div class="lang"><a href="support.html">English</a> · <strong>中文</strong></div>
+    <main id="main-content" class="document">
+      <nav class="language-switch" aria-label="语言">
+        <a href="support.html" lang="en">English</a><span aria-hidden="true">·</span><strong>中文</strong>
+      </nav>
+      <p class="eyebrow">帮助中心</p>
+      <h1>技术支持</h1>
+      <p class="updated">更新日期：2026 年 9 月 5 日</p>
+      <p class="lead">Falcon 是面向 iPhone、iPad 与 Mac 的原生 iPerf3 / iPerf2 网络吞吐测试工具。以下内容已按当前的「连接」「监听」和「SSH」工作流更新。</p>
 
-  <h1>技术支持</h1>
-  <p class="updated">使用 Falcon 遇到问题？从这里开始。</p>
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">联系我们</h2>
+        <div class="callout">
+          <p><strong>邮箱：</strong><a href="mailto:boxing.falcon.support@gmail.com">boxing.falcon.support@gmail.com</a></p>
+          <p>为便于快速定位问题，请附上 Falcon 版本、设备型号与系统版本、iPerf 引擎、测试方向与协议、隐藏敏感部分后的目标地址，以及所用模式（连接 / 监听 / SSH）。</p>
+        </div>
+      </section>
 
-  <p>Falcon 是一款基于 iperf 的 iOS 网络吞吐测试工具。如果你遇到问题或有疑问，欢迎发邮件给我们——每一封都会认真查看。</p>
+      <section aria-labelledby="faq-title">
+        <h2 id="faq-title">常见问题</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>为什么测试连不上？</h3>
+            <p>在「连接」模式下，对端必须已经运行兼容的 iPerf 服务端。请检查主机、端口、防火墙和网络可达性。iPerf3 与 iPerf2 不能互通，两端必须使用同一引擎；常见默认端口分别是 iPerf3 的 5201 和 iPerf2 的 5001。</p>
+          </article>
 
-  <h2>联系方式</h2>
-  <p>邮箱：<a href="mailto:boxing.falcon.support@gmail.com">boxing.falcon.support@gmail.com</a></p>
-  <p>为便于我们复现问题，来信请尽量附上：iOS 版本、设备型号、使用的引擎（iperf3 / iperf2），以及这次测试是本地直连还是走 SSH。</p>
+          <article class="faq-item">
+            <h3>Falcon 可以让本机作为服务端吗？</h3>
+            <p>可以。选择「监听」，设定网络接口与端口后启动服务。Falcon 会显示其他设备应连接的地址，并可持续接受多次客户端连接；在你停止监听前，每次完成的会话都会单独保存。</p>
+          </article>
 
-  <h2>常见问题</h2>
+          <article class="faq-item">
+            <h3>内置公共服务器是怎么回事？</h3>
+            <p>Falcon 收录了由第三方独立运营的公共 iPerf3 服务器，适合快速检查。Falcon 不运营这些服务器，也无法保证其容量、隐私实践、支持端口或可用性。请遵守运营方的限制；如需受控测试或传输敏感流量，请使用你自己的服务端。</p>
+          </article>
 
-  <h2>为什么测试连不上？</h2>
-  <p>吞吐测试需要<strong>对端有一个正在运行的 iperf server</strong>。请确认目标设备在你的网络中可达，并且 iperf server 正监听你指定的端口（iperf3 默认 5201，iperf2 默认 5001）。使用 Falcon Pro 时，SSH 编排功能会自动帮你起停对端的 server。</p>
+          <article class="faq-item">
+            <h3>免费版包含什么？Falcon Pro 又增加什么？</h3>
+            <p>免费版支持手动 TCP / UDP 测试、上传 / 下载 / 双向测速、本机服务端、实时结果、历史记录，以及单条 CSV / JSON 导出与分享卡片。Falcon Pro 为一次性购买，额外提供 SSH 编排、高级图形与命令行配置和命令收藏、内置场景与自定义预设、常用目标与 SSH 对端保存、最多六条结果对比和批量导出。</p>
+          </article>
 
-  <h2>免费版和 Pro 版有什么区别？</h2>
-  <p>免费版可以完整手动跑吞吐测试（TCP / UDP、上传 / 下载方向、并行流、自定义码率），并查看、导出、分享你的全部历史记录。<strong>Falcon Pro</strong>（一次性买断）额外提供：SSH 远程编排、命令模式、自定义预设与内置场景、保存 / 收藏常用目标，以及历史运行对比和批量导出。</p>
+          <article class="faq-item">
+            <h3>SSH 编排具体做什么？</h3>
+            <p>Falcon 可连接 OpenWrt、Linux 或其他 SSH 主机，检测可用的 iPerf 引擎，自动启动远端、运行测试并在结束后清理。支持密码、OpenSSH 私钥，以及明确配置的无凭据访问；主机密钥采用首次使用信任（TOFU）方式校验。</p>
+          </article>
 
-  <h2>SSH 编排是做什么的？</h2>
-  <p>不用再手动到对端敲 <code>iperf -s</code>。Falcon 会通过 SSH 连到对端设备（OpenWrt / Linux / 另一台机器），自动起好 iperf server，在手机上跑 client，测完再自动回收对端进程。支持密码与私钥认证，并对主机密钥做校验（TOFU）。</p>
+          <article class="faq-item">
+            <h3>为什么 UDP 结果没有抖动或丢包？</h3>
+            <p>这些指标来自接收端报告。部分引擎与方向组合——尤其是某些 iPerf2 UDP 测试——不会返回这份报告。此时 Falcon 会显示「—」或解释提示；吞吐速度仍按发送端口径显示。</p>
+          </article>
 
-  <h2>我的 UDP 测试没有抖动 / 丢包数据？</h2>
-  <p>抖动和丢包来自对端 server 的回传报告。在某些 UDP 测试方向下（尤其是 iperf2 正向 UDP），这些数值可能拿不到——此时 Falcon 会显示「—」并提示「未收到对端确认」。界面上显示的速度是发送端口径的码率。</p>
+          <article class="faq-item">
+            <h3>结果与 SSH 凭据存在哪里？</h3>
+            <p>测试历史、备注、预设、命令和目标都保存在应用本地。在 Apple 平台上，SSH 密码与私钥存入系统钥匙串。Falcon 没有账号体系，也不会把这些数据发送给开发者。详见<a href="privacy-zh.html">隐私政策</a>。</p>
+          </article>
 
-  <h2>Falcon 会收集我的数据吗？</h2>
-  <p>不会。所有测试结果都只保存在你的设备上，SSH 凭据仅存于 iOS 钥匙串（Keychain），不会回传给开发者。详见<a href="privacy-zh.html">隐私政策</a>。</p>
+          <article class="faq-item">
+            <h3>如何恢复 Falcon Pro？</h3>
+            <p>打开「设置」，进入 Falcon Pro，然后选择<strong>「恢复购买」</strong>。请使用完成原始购买的同一 Apple 账户。如果权益仍未恢复，请先确认设备可正常使用 App Store 购买服务，再把错误提示发给我们。</p>
+          </article>
 
-  <h2>换了新设备如何恢复购买？</h2>
-  <p>打开 Falcon 的「设置」页，找到 Falcon Pro 区域，点击<strong>「恢复购买」</strong>。只要使用同一个 Apple ID 登录，你的 Pro 解锁状态就会恢复。</p>
+          <article class="faq-item">
+            <h3>支持哪些系统与语言？</h3>
+            <p>当前 Apple 版本支持 iOS / iPadOS 17 及以上，以及运行在 Apple 芯片上的 macOS 14 及以上。界面支持简体中文、繁體中文、English、日本語、한국어、Deutsch、Français、Español 与 Русский。</p>
+          </article>
+        </div>
+      </section>
 
-  <footer>© 2026 Bo Xing · <a href="index.html">返回首页</a> · <a href="privacy-zh.html">隐私政策</a> · <a href="terms-zh.html">用户协议</a></footer>
-</div>
+      <div class="hero-actions">
+        <a class="button primary" href="https://apps.apple.com/app/id6780008195">获取最新版本</a>
+        <a class="button" href="mailto:boxing.falcon.support@gmail.com">发送邮件</a>
+      </div>
+    </main>
+
+    <footer>
+      <span>© 2026 Bo Xing</span>
+      <nav class="footer-links" aria-label="页脚导航">
+        <a href="index.html">首页</a>
+        <a href="privacy-zh.html">隐私政策</a>
+        <a href="terms-zh.html">用户条款</a>
+      </nav>
+    </footer>
+  </div>
 </body>
 </html>

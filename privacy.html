@@ -1,57 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy · Falcon</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for iPerf Falcon, including local data, network testing, SSH credentials, purchases, and the support website.">
+  <meta name="theme-color" content="#f8faff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080b12" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://bo-xing.github.io/falcon-site/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://bo-xing.github.io/falcon-site/privacy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://bo-xing.github.io/falcon-site/privacy-zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://bo-xing.github.io/falcon-site/privacy.html">
+  <link rel="icon" href="app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="app-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Privacy Policy · iPerf Falcon</title>
 </head>
 <body>
-<div class="wrap">
-  <header class="site">
-    <div class="mark">F</div>
-    <h1>Falcon</h1>
-  </header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="iPerf Falcon home">
+        <img src="app-icon.png" width="42" height="42" alt="">
+        <span>iPerf Falcon</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="support.html">Support</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </header>
 
-  <div class="lang"><strong>English</strong> · <a href="privacy-zh.html">中文</a></div>
+    <main id="main-content" class="document">
+      <nav class="language-switch" aria-label="Language">
+        <strong>English</strong><span aria-hidden="true">·</span><a href="privacy-zh.html" lang="zh-Hans">中文</a>
+      </nav>
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: September 5, 2026</p>
+      <p>This Privacy Policy explains how iPerf Falcon (“Falcon” or the “App”), developed and published by Bo Xing, handles information when you use the App or this support website.</p>
 
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: June 20, 2026</p>
+      <div class="callout">
+        <p><strong>In short:</strong> Falcon has no account system, advertising, analytics, or tracking. The App does not automatically transmit your test history, saved targets, commands, or SSH credentials to the developer.</p>
+      </div>
 
-  <p>This Privacy Policy explains how Falcon (the “App”) handles your information. Falcon is a network throughput testing tool built on the open-source iperf, developed and published by an individual developer, Bo Xing.</p>
+      <section aria-labelledby="local-data-title">
+        <h2 id="local-data-title">1. Data stored on your device</h2>
+        <p>Falcon stores the information needed to provide its features locally:</p>
+        <ul>
+          <li><strong>Test results and history:</strong> throughput samples, metrics, configurations, timestamps, notes, and saved results.</li>
+          <li><strong>Configurations:</strong> app preferences, recent and saved targets, custom presets, saved commands, SSH peer details, and local counters used to decide when the system review prompt may be requested.</li>
+          <li><strong>SSH security data on Apple platforms:</strong> passwords and private keys are stored in the system Keychain. Known-host keys used for trust-on-first-use verification are stored in the App’s local container. Credentials are not stored in the test-history database.</li>
+        </ul>
+        <p>Falcon does not upload this data to the developer or synchronize it through a Falcon account.</p>
+      </section>
 
-  <h2>Core Principle</h2>
-  <p>The App <strong>does not collect, upload, or sell any of your personal information</strong>. There is no account system and no registration. The developer has no access to your device data. All data stays on your device.</p>
+      <section aria-labelledby="network-title">
+        <h2 id="network-title">2. Network connections you initiate</h2>
+        <p>Network testing necessarily sends and receives traffic. Falcon connects to addresses you choose when you start a reachability check, client test, local server, or SSH-orchestrated test. The target device, network operator, and internet provider may be able to observe connection metadata and test traffic.</p>
+        <p>If you choose a server from Falcon’s public-server directory, you are connecting to an independently operated third-party server. Falcon does not control those servers or their logging and privacy practices. Do not send sensitive content through a public test server.</p>
+        <p>Falcon does not send your test content, history, credentials, or usage analytics to a developer-operated server.</p>
+      </section>
 
-  <h2>Data the App Creates and Where It Is Stored</h2>
-  <ul>
-    <li><strong>Test results and history</strong>: The results, charts, and notes for each test you run are stored only locally on your device (via iOS SwiftData / a local database). This data is never uploaded to the developer or any third party. You can delete it at any time within the App.</li>
-    <li><strong>Test presets and target addresses</strong>: Saved test templates, frequently used addresses, and SSH peer information are stored only locally on your device.</li>
-    <li><strong>SSH credentials</strong>: If you use the remote orchestration feature, any SSH password or private key you enter is stored only in the iOS system Keychain, protected by system encryption, and is <strong>never transmitted to the developer</strong>. It is sent directly from your device to the target device you specify, solely to establish the SSH connection when you initiate a remote test.</li>
-  </ul>
+      <section aria-labelledby="apple-title">
+        <h2 id="apple-title">3. App Store services and purchases</h2>
+        <p>Falcon Pro is offered as a one-time Apple In-App Purchase. Apple’s StoreKit service handles product information, payment, entitlement verification, and purchase restoration. The developer does not receive your full payment-card details. Apple processes information under its <a href="https://www.apple.com/legal/privacy/data/en/app-store/">App Store privacy notice</a> and <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a>.</p>
+        <p>If you choose an App Store rating or product-page link, the App opens an Apple service. Any information processed there is governed by Apple’s policies.</p>
+      </section>
 
-  <h2>Network Connections</h2>
-  <p>A network testing tool inherently generates network traffic. The App connects only <strong>when you initiate a test</strong>, and only to the <strong>target address you specify yourself</strong> (an IP / hostname / your own SSH peer device). The App does not perform any network communication in the background or without your action, and never sends data back to the developer.</p>
+      <section aria-labelledby="exports-title">
+        <h2 id="exports-title">4. Exports, sharing, and support email</h2>
+        <p>When you export CSV or JSON files, create a result card, or use the system share sheet, you choose the destination. After sharing, the receiving app or service handles the data under its own policies.</p>
+        <p>If you email support, the developer receives the address, message, attachments, and diagnostic details you choose to provide. This information is used only to respond to your request and is retained only as needed for support, security, and legal obligations. Please remove passwords, private keys, and other secrets before sending.</p>
+      </section>
 
-  <h2>Third Parties and Analytics</h2>
-  <p>The App <strong>does not integrate any third-party analytics, advertising, or crash-reporting SDKs</strong>. It does not track users and does not use cookies.</p>
+      <section aria-labelledby="website-title">
+        <h2 id="website-title">5. This website</h2>
+        <p>This static website does not set first-party cookies and does not include advertising or analytics scripts. It is hosted on GitHub Pages. GitHub states that visitors’ IP addresses are logged for security purposes; that processing is governed by the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+      </section>
 
-  <h2>In-App Purchases and Payments</h2>
-  <p>Pro features are offered through Apple In-App Purchase (StoreKit). Payments are processed by Apple under Apple’s privacy policy. The developer does not receive and cannot access your payment card details.</p>
+      <section aria-labelledby="deletion-title">
+        <h2 id="deletion-title">6. Retention and deletion</h2>
+        <p>You can delete history, saved targets, presets, commands, and related records in the App. Deleting an SSH target also removes the credential Falcon associated with that target from the Keychain.</p>
+        <p>Uninstalling the App removes data in its application container. Keychain items are managed by the operating system and may persist after an uninstall; Falcon cannot guarantee their removal through uninstallation alone. Exported or shared copies remain wherever you chose to save or send them.</p>
+      </section>
 
-  <h2>Children’s Privacy</h2>
-  <p>The App is a general-purpose network utility, is not directed at children, and does not knowingly collect any information from children.</p>
+      <section aria-labelledby="children-title">
+        <h2 id="children-title">7. Children’s privacy</h2>
+        <p>Falcon is a general-purpose network utility, is not directed to children, and does not knowingly collect personal information from children.</p>
+      </section>
 
-  <h2>Data Deletion</h2>
-  <p>Because all data is stored locally on your device, you can delete test history, targets, and credentials within the App. Uninstalling the App removes all of its locally stored data and Keychain entries.</p>
+      <section aria-labelledby="changes-title">
+        <h2 id="changes-title">8. Changes to this policy</h2>
+        <p>If this policy changes, the updated version will be published here and the date above will be revised.</p>
+      </section>
 
-  <h2>Changes to This Policy</h2>
-  <p>If this policy is updated, the latest version will be published on this page and the “Last updated” date above will be revised.</p>
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">9. Contact</h2>
+        <p>Questions about privacy can be sent to <a href="mailto:boxing.falcon.support@gmail.com">boxing.falcon.support@gmail.com</a>.</p>
+      </section>
+    </main>
 
-  <h2>Contact</h2>
-  <p>If you have any questions about this Privacy Policy, contact: <a href="mailto:boxing.falcon.support@gmail.com">boxing.falcon.support@gmail.com</a></p>
-
-  <footer>© 2026 Bo Xing · <a href="index.html">Home</a></footer>
-</div>
+    <footer>
+      <span>© 2026 Bo Xing</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </footer>
+  </div>
 </body>
 </html>

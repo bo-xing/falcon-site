@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bo-xing.github.io/falcon-site/sitemap.xml

@@ -1,50 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support · Falcon</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Support and frequently asked questions for iPerf Falcon on iPhone, iPad, and Mac.">
+  <meta name="theme-color" content="#f8faff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080b12" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://bo-xing.github.io/falcon-site/support.html">
+  <link rel="alternate" hreflang="en" href="https://bo-xing.github.io/falcon-site/support.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://bo-xing.github.io/falcon-site/support-zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://bo-xing.github.io/falcon-site/support.html">
+  <link rel="icon" href="app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="app-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Support · iPerf Falcon</title>
 </head>
 <body>
-<div class="wrap">
-  <header class="site">
-    <div class="mark">F</div>
-    <h1>Falcon</h1>
-  </header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="iPerf Falcon home">
+        <img src="app-icon.png" width="42" height="42" alt="">
+        <span>iPerf Falcon</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </header>
 
-  <div class="lang"><strong>English</strong> · <a href="support-zh.html">中文</a></div>
+    <main id="main-content" class="document">
+      <nav class="language-switch" aria-label="Language">
+        <strong>English</strong><span aria-hidden="true">·</span><a href="support-zh.html" lang="zh-Hans">中文</a>
+      </nav>
+      <p class="eyebrow">Help center</p>
+      <h1>Support</h1>
+      <p class="updated">Updated September 5, 2026</p>
+      <p class="lead">Falcon is a native iPerf3 and iPerf2 throughput tester for iPhone, iPad, and Mac. The answers below reflect the current Connect, Listen, and SSH workflows.</p>
 
-  <h1>Support</h1>
-  <p class="updated">Need help with Falcon? Start here.</p>
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="callout">
+          <p><strong>Email:</strong> <a href="mailto:boxing.falcon.support@gmail.com">boxing.falcon.support@gmail.com</a></p>
+          <p>For faster troubleshooting, include the Falcon version, device model and OS version, iPerf engine, test direction and protocol, target address with the sensitive parts removed, and whether you used Connect, Listen, or SSH.</p>
+        </div>
+      </section>
 
-  <p>Falcon is an iperf-based network throughput tester for iOS. If you run into a problem or have a question, email us — we read every message.</p>
+      <section aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Why does a test fail to connect?</h3>
+            <p>In Connect mode, the other device must already be running a compatible iPerf server. Check the host, port, firewall, and network reachability. iPerf3 and iPerf2 do not interoperate, so the engine must match on both ends. Common defaults are port 5201 for iPerf3 and 5001 for iPerf2.</p>
+          </article>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:boxing.falcon.support@gmail.com">boxing.falcon.support@gmail.com</a></p>
-  <p>To help us reproduce an issue, please include your iOS version, device model, the engine you used (iperf3 / iperf2), and whether the test was local or over SSH.</p>
+          <article class="faq-item">
+            <h3>Can Falcon act as the server?</h3>
+            <p>Yes. Choose Listen, select the interface and port, then start the server. Falcon shows the address another device should connect to and can accept repeated client sessions, saving each completed session separately until you stop listening.</p>
+          </article>
 
-  <h2>Frequently Asked Questions</h2>
+          <article class="faq-item">
+            <h3>How do the public servers work?</h3>
+            <p>Falcon includes a directory of independently operated public iPerf3 servers. They are convenient for quick checks, but Falcon does not operate them or guarantee their capacity, privacy practices, supported ports, or availability. Respect the operator’s limits, and use your own server for controlled or sensitive testing.</p>
+          </article>
 
-  <h2>Why does my test fail to connect?</h2>
-  <p>A throughput test needs an <strong>iperf server running on the other end</strong>. Make sure the target device is reachable on your network and that an iperf server is listening on the port you specified (default 5201 for iperf3, 5001 for iperf2). With Falcon Pro, the SSH orchestration feature starts and stops that server for you automatically.</p>
+          <article class="faq-item">
+            <h3>What is included for free, and what does Falcon Pro add?</h3>
+            <p>The free version supports manual TCP and UDP tests, upload, download and bidirectional testing, local server mode, live results, history, and individual CSV/JSON exports and share cards. Falcon Pro is a one-time purchase that adds SSH orchestration, advanced graphical and command-line configuration with saved commands, built-in scenarios and custom presets, saved targets and SSH peers, comparison of up to six runs, and batch export.</p>
+          </article>
 
-  <h2>What is the difference between the free and Pro versions?</h2>
-  <p>The free version lets you run full manual throughput tests (TCP / UDP, both directions, parallel streams, custom bitrate) and view, export, and share your complete history. <strong>Falcon Pro</strong> (a one-time purchase) adds SSH remote orchestration, command mode, custom presets and built-in scenarios, saved/favorite targets, and historical run comparison and batch export.</p>
+          <article class="faq-item">
+            <h3>What does SSH orchestration do?</h3>
+            <p>Falcon can connect to OpenWrt, Linux, or another SSH host, detect the available iPerf engine, start the remote endpoint, run the test, and clean up afterward. It supports password, OpenSSH private-key, and explicitly configured no-credential access. Host keys are verified using trust on first use (TOFU).</p>
+          </article>
 
-  <h2>What does SSH orchestration do?</h2>
-  <p>Instead of manually typing <code>iperf -s</code> on the other device, Falcon connects to a peer (OpenWrt / Linux / another machine) over SSH, starts the iperf server for you, runs the client on your phone, and cleans up the remote process when the test finishes. It supports password and private-key authentication and verifies the host key (TOFU).</p>
+          <article class="faq-item">
+            <h3>Why is jitter or packet loss missing from a UDP result?</h3>
+            <p>Those metrics come from the receiving side’s report. Some engine and direction combinations—especially certain iPerf2 UDP runs—do not return that report. Falcon then shows a dash or an explanatory note; the throughput shown still reflects the sender-side rate.</p>
+          </article>
 
-  <h2>My UDP test shows no jitter or packet loss. Why?</h2>
-  <p>Jitter and loss come from the server-side report. For some UDP test directions, especially with iperf2, those numbers may not be returned — in that case Falcon shows a dash and a note that the peer report was not received. The throughput figure shown is the sender-side rate.</p>
+          <article class="faq-item">
+            <h3>Where are results and SSH credentials stored?</h3>
+            <p>Test history, notes, presets, commands, and targets remain in local app storage. On Apple platforms, SSH passwords and private keys are stored in the system Keychain. Falcon has no account system and does not send this data to the developer. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+          </article>
 
-  <h2>Does Falcon collect my data?</h2>
-  <p>No. All test results stay on your device, SSH credentials are stored only in the iOS Keychain, and nothing is sent to the developer. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+          <article class="faq-item">
+            <h3>How do I restore Falcon Pro?</h3>
+            <p>Open Settings, choose Falcon Pro, and select <strong>Restore Purchases</strong>. Use the same Apple Account that made the original purchase. If the entitlement still does not appear, confirm that App Store purchases are available on the device, then contact us with the error message.</p>
+          </article>
 
-  <h2>How do I restore my purchase on a new device?</h2>
-  <p>Open the Settings tab in Falcon, find the Falcon Pro section, and tap <strong>Restore Purchases</strong>. As long as you are signed in with the same Apple ID, your Pro unlock will be restored.</p>
+          <article class="faq-item">
+            <h3>Which systems and languages are supported?</h3>
+            <p>The current Apple release supports iOS and iPadOS 17 or later, plus macOS 14 or later on Apple silicon. The interface is available in Simplified Chinese, Traditional Chinese, English, Japanese, Korean, German, French, Spanish, and Russian.</p>
+          </article>
+        </div>
+      </section>
 
-  <footer>© 2026 Bo Xing · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></footer>
-</div>
+      <div class="hero-actions">
+        <a class="button primary" href="https://apps.apple.com/app/id6780008195">Get the latest version</a>
+        <a class="button" href="mailto:boxing.falcon.support@gmail.com">Email support</a>
+      </div>
+    </main>
+
+    <footer>
+      <span>© 2026 Bo Xing</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </footer>
+  </div>
 </body>
 </html>
