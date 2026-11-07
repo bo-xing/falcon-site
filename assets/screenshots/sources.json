@@ -1,0 +1,72 @@
+[
+  {
+    "file": "assets/screenshots/ios-en-speed.jpg",
+    "source": "screenshots/raw/en-iphone-medium/speed.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/ios-en-ssh.jpg",
+    "source": "screenshots/raw/en-iphone-medium/ssh.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/ios-en-compare.jpg",
+    "source": "screenshots/raw/en-iphone-medium/compare.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/android-en-speed.jpg",
+    "source": "screenshots/raw/android/en-phone/speed.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/android-en-ssh.jpg",
+    "source": "screenshots/raw/android/en-phone/ssh.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/android-en-compare.jpg",
+    "source": "screenshots/raw/android/en-phone/compare.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/mac-en-speed.jpg",
+    "source": "screenshots/raw/en-mac/speed.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/ios-zh-speed.jpg",
+    "source": "screenshots/raw/zh-iphone-medium/speed.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/ios-zh-ssh.jpg",
+    "source": "screenshots/raw/zh-iphone-medium/ssh.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/ios-zh-compare.jpg",
+    "source": "screenshots/raw/zh-iphone-medium/compare.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/android-zh-speed.jpg",
+    "source": "screenshots/raw/android/zh-phone/speed.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/android-zh-ssh.jpg",
+    "source": "screenshots/raw/android/zh-phone/ssh.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/android-zh-compare.jpg",
+    "source": "screenshots/raw/android/zh-phone/compare.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  },
+  {
+    "file": "assets/screenshots/mac-zh-speed.jpg",
+    "source": "screenshots/raw/zh-mac/speed.png",
+    "note": "Native screenshot fixture; sample measurements, not a performance claim."
+  }
+]

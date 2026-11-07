@@ -1,0 +1,65 @@
+<p>本隐私政策说明由个人开发者 Bo Xing 开发与发布的 iPerf Falcon（以下简称「Falcon」或「本应用」）在你使用应用或本支持网站时如何处理信息。</p>
+
+      <div class="callout">
+        <p><strong>简要说明：</strong>Falcon 没有账号体系，不含广告、分析或追踪。本应用不会自动把你的测试历史、保存的目标、命令或 SSH 凭据传输给开发者。</p>
+      </div>
+
+      <section aria-labelledby="local-data-title">
+        <h2 id="local-data-title">1. 保存在设备上的数据</h2>
+        <p>Falcon 会在设备本地保存实现功能所需的信息：</p>
+        <ul>
+          <li><strong>测试结果与历史：</strong>吞吐采样、指标、测试配置、时间、备注及保存的结果。</li>
+          <li><strong>配置：</strong>应用偏好、最近使用和保存的目标、自定义预设、命令收藏、SSH 对端信息，以及用于判断何时可以请求系统评分提示的本地计数。</li>
+          <li><strong>Apple 平台上的 SSH 安全数据：</strong>密码与私钥存入系统钥匙串（Keychain）；用于首次使用信任（TOFU）校验的已知主机密钥保存在应用本地容器中。凭据不会存入测试历史数据库。</li>
+          <li><strong>Android 上的 SSH 安全数据：</strong>凭据、SSH 目标与已知主机信息使用 Android Keystore 支持的密钥加密，存储在历史数据库之外，并排除在 Android 系统备份之外。</li>
+        </ul>
+        <p>Falcon 不会把这些数据上传给开发者，也不会通过 Falcon 账号同步。</p>
+      </section>
+
+      <section aria-labelledby="network-title">
+        <h2 id="network-title">2. 由你发起的网络连接</h2>
+        <p>网络测试必然会收发流量。运行客户端测试、启动本机服务端或使用 SSH 编排时，Falcon 会与对端通信。打开常用地址、SSH 对端或公共服务器列表时，也可能自动对列表地址进行短暂的 TCP 连通检测；你还可以手动刷新。选择 SSH 对端后，应用可能探测其可用的 iPerf 引擎。TCP 检测不会把已保存的测速历史发送到这些对端。目标设备、网络运营方和互联网服务提供商可能看到连接元数据与测试流量。</p>
+        <p>如果选择 Falcon 公共服务器目录中的节点，你连接的是由第三方独立运营的服务器。Falcon 不控制这些服务器及其日志与隐私实践。请勿通过公共测试服务器发送敏感内容。</p>
+        <p>Falcon 不会把测试内容、历史、凭据或使用分析发送到开发者运营的服务器。</p>
+      </section>
+
+      <section aria-labelledby="apple-title">
+        <h2 id="apple-title">3. 商店服务与购买</h2>
+        <p><strong>Apple：</strong>Falcon Pro 为可选的一次性应用内购买。StoreKit 处理产品信息、支付、权益校验与恢复。Apple 依据其 <a href="https://www.apple.com/legal/privacy/data/zh-cn/app-store/">App Store 与隐私说明</a>和<a href="https://www.apple.com.cn/legal/privacy/">隐私政策</a>处理相关信息。</p>
+        <p><strong>Android：</strong>Google Play Billing 处理产品信息与支付。Falcon 接收购买信息，包括购买令牌和签名购买数据，用于验证、确认与恢复 Pro。已验证的权益信息使用 Android Keystore 支持的加密保存在本地，并排除在 Android 系统备份之外。Google 依据其<a href="https://policies.google.com/privacy?hl=zh-CN">隐私政策</a>处理商店相关信息。</p>
+        <p>Apple 与 Google Play 购买相互独立。开发者不会收到你的完整支付卡信息。打开商品页或评分流程时，将使用对应商店服务并适用其政策。</p>
+      </section>
+
+      <section aria-labelledby="exports-title">
+        <h2 id="exports-title">4. 导出、分享与支持邮件</h2>
+        <p>当你导出 CSV / JSON 文件、创建结果卡片或使用系统分享面板时，目标位置由你选择。分享后，接收应用或服务会按其自身政策处理数据。</p>
+        <p>如果你发送支持邮件，开发者会收到你主动提供的邮箱地址、正文、附件与诊断信息。这些信息仅用于回复请求，并只在支持、安全与法律义务所需的期限内保留。发送前请移除密码、私钥及其他秘密信息。</p>
+      </section>
+
+      <section aria-labelledby="website-title">
+        <h2 id="website-title">5. 本网站</h2>
+        <p>本静态网站不设置第一方 Cookie，也不包含广告或分析脚本。如果你切换网站外观，浅色／深色偏好会保存在此浏览器的本地存储中，不会发送给开发者；可通过清除此网站的浏览器数据移除。网站托管于 GitHub Pages。GitHub 说明，为安全目的会记录访问者的 IP 地址；相关处理适用 <a href="https://docs.github.com/zh/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。</p>
+      </section>
+
+      <section aria-labelledby="deletion-title">
+        <h2 id="deletion-title">6. 保留与删除</h2>
+        <p>你可以在应用内删除历史、已保存目标、预设、命令和相关记录。删除 SSH 目标时，Falcon 会从凭据存储中移除与该目标关联的凭据。</p>
+        <p><strong>Apple：</strong>卸载会移除应用容器，但系统 Keychain 条目可能继续保留。如希望 Falcon 移除关联凭据，请在卸载前于应用内删除 SSH 目标。</p>
+        <p><strong>Android：</strong>SSH 安全数据与本地已验证 Pro 购买数据不进入系统备份。清除应用存储或卸载会移除应用本地数据，但不会取消商店购买或删除商店管理的记录。其他应用数据可能受设备系统备份设置影响。</p>
+        <p>已导出或分享的副本仍保留在你选择的位置。商店购买记录由 Apple 或 Google 按各自政策管理。</p>
+      </section>
+
+      <section aria-labelledby="children-title">
+        <h2 id="children-title">7. 儿童隐私</h2>
+        <p>Falcon 是通用网络工具，并非面向儿童设计，也不会有意收集儿童的个人信息。</p>
+      </section>
+
+      <section aria-labelledby="changes-title">
+        <h2 id="changes-title">8. 政策变更</h2>
+        <p>本政策如有变更，将在此发布更新版本并修改顶部日期。</p>
+      </section>
+
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">9. 联系我们</h2>
+        <p>如有隐私相关问题，请发送邮件至 <a href="mailto:boxing.support@gmail.com">boxing.support@gmail.com</a>。</p>
+      </section>

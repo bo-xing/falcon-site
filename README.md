@@ -1,26 +1,55 @@
-# falcon-site
+# iPerf Falcon website
 
-Public product, support, privacy, and terms pages for **iPerf Falcon**, hosted with GitHub Pages.
+Product, support, privacy, and terms pages for iPerf Falcon. Dependency-free static HTML, CSS and JavaScript, hosted with GitHub Pages.
 
-| Page | English (default) | 中文 |
+- Website: https://bo-xing.github.io/falcon-site/
+- Apple: https://apps.apple.com/app/id6780008195
+- Android: https://play.google.com/store/apps/details?id=com.boxing.falcon
+
+| Page | English | 简体中文 |
 |---|---|---|
-| Product home | `index.html` | Bilingual summary on the same page |
-| Support & FAQ | `support.html` | `support-zh.html` |
-| Privacy Policy | `privacy.html` | `privacy-zh.html` |
-| Terms of Use | `terms.html` | `terms-zh.html` |
+| Product | `index.html` | `index-zh.html` |
+| Help center | `support.html` | `support-zh.html` |
+| Privacy | `privacy.html` | `privacy-zh.html` |
+| Terms | `terms.html` | `terms-zh.html` |
 
-Live site: https://bo-xing.github.io/falcon-site/
+## Develop and preview
 
-App Store product: https://apps.apple.com/app/id6780008195
+```bash
+python3 scripts/build_site.py
+python3 scripts/check_site.py
+python3 -m http.server 8765 --bind 127.0.0.1
+```
+
+Open http://127.0.0.1:8765/ or http://127.0.0.1:8765/index-zh.html.
+
+The root HTML files and `sitemap.xml` are committed build output, so GitHub Pages serves them without a build dependency. Edit shared layouts, product/help copy, metadata, and the update date in `scripts/build_site.py`. Edit legal body text in `content/`. Then regenerate and commit the outputs together. Edit appearance in `style.css` and progressive enhancements in `site.js`; appearance initialization is in `theme.js`. CSS and JavaScript URLs carry content hashes to avoid stale assets after deployment.
+
+Before delivery:
+
+```bash
+python3 scripts/build_site.py --check
+python3 scripts/check_site.py
+python3 -m unittest discover -s scripts/tests -v
+git diff --check
+```
+
+Browser QA should cover both languages at 320, 390, 768 and 1440 CSS pixels; mobile navigation; same-language links and preservation of the current anchor when switching languages; screenshot platform tabs (including arrow keys, Home and End); image preview and Escape/focus return; FAQ deep links; appearance persistence and browser theme colors; and email-copy success or failure. Without JavaScript, navigation, download links, all screenshot panels, legal text and native FAQ disclosures remain available.
+
+## Assets
+
+`assets/screenshots/` contains optimized JPEG copies of native screenshot fixtures from the Falcon app repository. `sources.json` records their repository-relative provenance. Measurements are illustrative demo data; screenshots can include Pro features and differ from a newer app version. When updating, copy reviewed native captures for both languages, keep the aspect ratio, and update the manifest. Do not fabricate performance results or credentials. Current exports have a maximum dimension of 1800 px.
+
+`assets/social-card.png` is the local sharing preview. On macOS, regenerate it with `swift scripts/render_social_card.swift` from the repository root. No external fonts, analytics, image hosting or runtime libraries are required. The only persisted website preference is light/dark appearance in browser local storage, described in both privacy policies.
 
 ## Release maintenance
 
-When Falcon gains or changes a user-facing capability, review this site in the same release cycle:
+Review website copy against the app repository and publicly available store versions whenever user-visible behavior changes. Keep both languages aligned:
 
-1. Keep the free/Pro split in both support pages aligned with `docs/app-store-description.md` in the Falcon app repository.
-2. Update network activity, local storage, credentials, StoreKit behavior, exports, and third-party services in both privacy pages.
-3. Update purchase terms, supported platforms, public-server wording, and open-source components in both terms pages.
-4. Revise each changed legal page’s date, plus `sitemap.xml` `lastmod` values.
-5. Check every local link and the App Store, Apple legal, GitHub privacy, and email links before publishing.
+1. Verify supported platforms and download destinations.
+2. Check free/Pro boundaries, store-specific restoration, and platform differences. Apple and Google Play purchases are independent; comparison currently supports up to 6 runs on Apple and 4 on Android.
+3. Check network activity (including automatic target-list reachability probes), local storage, credentials, backup, exports, and store services.
+4. Update legal dates and the generator's `UPDATED` value when the policy actually changes.
+5. Check local routes plus store, platform-policy, refund, GitHub privacy and email links before publishing.
 
-The App Store listing and the app repository are the product source of truth; avoid hard-coding a release number on the home page so routine releases do not immediately make the site stale.
+GitHub Pages publication is separate from local implementation. No Sites hosting registration is required. Keep product copy free of hard-coded release numbers; actual capabilities and prices follow the installed version and its store.

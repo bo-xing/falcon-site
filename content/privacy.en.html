@@ -1,0 +1,65 @@
+<p>This Privacy Policy explains how iPerf Falcon (“Falcon” or the “App”), developed and published by Bo Xing, handles information when you use the App or this support website.</p>
+
+      <div class="callout">
+        <p><strong>In short:</strong> Falcon has no account system, advertising, analytics, or tracking. The App does not automatically transmit your test history, saved targets, commands, or SSH credentials to the developer.</p>
+      </div>
+
+      <section aria-labelledby="local-data-title">
+        <h2 id="local-data-title">1. Data stored on your device</h2>
+        <p>Falcon stores the information needed to provide its features locally:</p>
+        <ul>
+          <li><strong>Test results and history:</strong> throughput samples, metrics, configurations, timestamps, notes, and saved results.</li>
+          <li><strong>Configurations:</strong> app preferences, recent and saved targets, custom presets, saved commands, SSH peer details, and local counters used to decide when the system review prompt may be requested.</li>
+          <li><strong>SSH security data on Apple platforms:</strong> passwords and private keys are stored in the system Keychain. Known-host keys used for trust-on-first-use verification are stored in the App’s local container. Credentials are not stored in the test-history database.</li>
+          <li><strong>SSH security data on Android:</strong> credentials, SSH targets, and known-host data are encrypted using Android Keystore-backed keys. They are stored outside the history database and excluded from Android system backup.</li>
+        </ul>
+        <p>Falcon does not upload this data to the developer or synchronize it through a Falcon account.</p>
+      </section>
+
+      <section aria-labelledby="network-title">
+        <h2 id="network-title">2. Network connections you initiate</h2>
+        <p>Network testing necessarily sends and receives traffic. Falcon communicates with endpoints when you run a client test, start a local server, or use SSH orchestration. Opening saved-target, SSH-target, or public-server lists can also automatically trigger short TCP reachability checks for listed addresses; you can manually refresh these checks. Choosing an SSH target may probe its available iPerf engine. TCP checks do not send your saved test history to those endpoints. The target device, network operator, and internet provider may be able to observe connection metadata and test traffic.</p>
+        <p>If you choose a server from Falcon’s public-server directory, you are connecting to an independently operated third-party server. Falcon does not control those servers or their logging and privacy practices. Do not send sensitive content through a public test server.</p>
+        <p>Falcon does not send your test content, history, credentials, or usage analytics to a developer-operated server.</p>
+      </section>
+
+      <section aria-labelledby="apple-title">
+        <h2 id="apple-title">3. Store services and purchases</h2>
+        <p><strong>Apple:</strong> Falcon Pro is an optional one-time in-app purchase. StoreKit handles product information, payments, entitlement verification, and restoration. Apple processes information under its <a href="https://www.apple.com/legal/privacy/data/en/app-store/">App Store privacy notice</a> and <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a>.</p>
+        <p><strong>Android:</strong> Google Play Billing handles product information and payments. Falcon receives purchase information, including purchase tokens and signed purchase data, to verify, acknowledge, and restore Pro. Verified entitlement data is stored locally using Android Keystore-backed encryption and is excluded from Android backup. Google processes store information under its <a href="https://policies.google.com/privacy">Privacy Policy</a>.</p>
+        <p>Apple and Google Play purchases are independent. The developer does not receive your full payment-card details. Opening store product pages or rating flows uses the relevant store service and its policies.</p>
+      </section>
+
+      <section aria-labelledby="exports-title">
+        <h2 id="exports-title">4. Exports, sharing, and support email</h2>
+        <p>When you export CSV or JSON files, create a result card, or use the system share sheet, you choose the destination. After sharing, the receiving app or service handles the data under its own policies.</p>
+        <p>If you email support, the developer receives the address, message, attachments, and diagnostic details you choose to provide. This information is used only to respond to your request and is retained only as needed for support, security, and legal obligations. Please remove passwords, private keys, and other secrets before sending.</p>
+      </section>
+
+      <section aria-labelledby="website-title">
+        <h2 id="website-title">5. This website</h2>
+        <p>This static website does not set first-party cookies and does not include advertising or analytics scripts. If you change the website appearance, your light/dark preference is saved in this browser’s local storage. It is not sent to the developer and you can remove it by clearing this site’s browser data. It is hosted on GitHub Pages. GitHub states that visitors’ IP addresses are logged for security purposes; that processing is governed by the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+      </section>
+
+      <section aria-labelledby="deletion-title">
+        <h2 id="deletion-title">6. Retention and deletion</h2>
+        <p>You can delete history, saved targets, presets, commands, and related records in the App. Deleting an SSH target removes its associated credential from Falcon’s credential store.</p>
+        <p><strong>Apple:</strong> uninstalling removes the application container, but operating-system Keychain items can persist. Delete SSH targets in the App before uninstalling if you want Falcon to remove their associated credentials.</p>
+        <p><strong>Android:</strong> SSH security data and locally verified Pro purchase data are excluded from system backup. Clearing app storage or uninstalling removes the app’s local data; it does not cancel a store purchase or remove store-managed records. Other app data may be subject to the device’s system backup settings.</p>
+        <p>Exported or shared copies remain wherever you saved or sent them. Store purchase records are managed by Apple or Google under their policies.</p>
+      </section>
+
+      <section aria-labelledby="children-title">
+        <h2 id="children-title">7. Children’s privacy</h2>
+        <p>Falcon is a general-purpose network utility, is not directed to children, and does not knowingly collect personal information from children.</p>
+      </section>
+
+      <section aria-labelledby="changes-title">
+        <h2 id="changes-title">8. Changes to this policy</h2>
+        <p>If this policy changes, the updated version will be published here and the date above will be revised.</p>
+      </section>
+
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">9. Contact</h2>
+        <p>Questions about privacy can be sent to <a href="mailto:boxing.support@gmail.com">boxing.support@gmail.com</a>.</p>
+      </section>
